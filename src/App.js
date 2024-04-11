@@ -1,10 +1,8 @@
-import TItle from './component/Title/Title.js';
-
+import Router from './pages/Router/Router.js'
+import './App.css'
 function App() {
   return (
-    <div className="App">
-      <TItle></TItle>
-    </div>
+    <Router></Router>
   );
 }
 

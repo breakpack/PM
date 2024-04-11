@@ -1,0 +1,20 @@
+.bottom_Bar{
+    display: flex;
+    position:fixed;
+    bottom: 0;
+    width:100vw;
+    background-color: #F5D042;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    margin:1vw;
+    color : #0A174E;
+    font-size: 100%;
+    transition:all ease 0.3s;
+}
+.link:hover{
+    font-size: 200%;
+}
