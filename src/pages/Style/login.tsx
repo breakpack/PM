@@ -1,10 +1,38 @@
 import styled, { keyframes } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const Fadein = keyframes`
     from{opacity: 0;}
     to{opacity: 1;}
 `;
 
+export const GoBack = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  top: -20%;
+  left: -45%;
+  font-size: 300%;
+  width: 5vh;
+  height: 5vh;
+  color: white;
+  transition: all ease 0.3s;
+  &:hover {
+    font-size: 330%;
+  }
+`;
+export const ForgetIDPW = styled(Link)`
+  position: relative;
+  bottom: -30%;
+  color: white;
+  text-decoration: none;
+  font-size: 110%;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 export const Wapper = styled.div`
   position: relative;
   display: flex;
@@ -33,7 +61,7 @@ export const H1 = styled.h1`
   align-items: center;
   width: 80%;
   font-size: 400%;
-  color: #fad8d6;
+  color: #ffffff;
 `;
 
 export const InputWrapper = styled.div`
@@ -42,32 +70,36 @@ export const InputWrapper = styled.div`
   margin-top: 5%;
   width: 40%;
   height: 7%;
-  background-color: pink;
-  border: 1px solid black;
 `;
 
-export const InputId = styled.input`
-  z-index: 3;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-width: 0;
-  display: block;
-  &:focus {
-    border: none;
-  }
+export const InputLabel = styled.label`
+  position: absolute;
+  font-size: 200%;
+  transition: all ease 0.2s;
+  color: white;
 `;
-export const InputPw = styled.input`
+
+export const Input = styled.input`
   z-index: 3;
   position: relative;
   width: 100%;
   height: 100%;
   background: none;
-  border-width: 0;
   display: block;
+  border: none;
+  border-bottom: 3px solid;
+  font-size: 200%;
+  color: white;
   &:focus {
-    border: none;
+    outline: none;
+  }
+  &:focus ~ ${InputLabel} {
+    font-size: 100%;
+    margin-bottom: 3%;
+  }
+  &:valid ~ ${InputLabel} {
+    font-size: 100%;
+    margin-bottom: 3%;
   }
 `;
 
@@ -90,7 +122,7 @@ export const Button = styled.button`
     position: absolute;
     width: 80vw;
     height: 80vw;
-    background-color: #edb88b;
+    background-color: #fff6e3;
     transition: all ease 0.8s;
     transform: translateX(-110%) translateY(-30%) rotate(45deg);
   }
@@ -99,10 +131,11 @@ export const Button = styled.button`
     transform: translateX(-80%) translateY(-30%) rotate(45deg);
   }
 `;
+
 export const ButtonSpan = styled.span`
   z-index: 5;
   position: absolute;
   font-size: 170%;
-  color: #fad8d6;
+  color: #fff6e3;
   transform: translateX(-50%) translateY(-50%);
 `;
