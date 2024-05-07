@@ -1,12 +1,11 @@
-import s from './Bar.module.css';
-import { Link } from 'react-router-dom';
+import * as s from '../CPstyle/Bar.tsx';
 
 function Bar() {
   return (
-    <div className={s.bottom_Bar}>
-        <Link to='/login' className={s.link}>Login</Link>
-        <Link to='/register' className={s.link}>Register</Link>
-    </div>
+    <s.bottom_Bar>
+        <s.Linktag to='/login'>Login</s.Linktag>
+        <s.Linktag to='/register'>Register</s.Linktag>
+    </s.bottom_Bar>
   );
 }
 

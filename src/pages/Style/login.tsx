@@ -23,6 +23,23 @@ export const GoBack = styled(Link)`
     font-size: 330%;
   }
 `;
+export const GoBack1 = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  top: -10%;
+  left: -45%;
+  font-size: 300%;
+  width: 5vh;
+  height: 5vh;
+  color: white;
+  transition: all ease 0.3s;
+  &:hover {
+    font-size: 330%;
+  }
+`;
 export const ForgetIDPW = styled(Link)`
   position: relative;
   bottom: -30%;
