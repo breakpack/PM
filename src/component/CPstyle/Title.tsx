@@ -14,7 +14,7 @@ export const fade_in2 = keyframes`
     0%{opacity: 0;}
     100%{opacity: 1;}
 `;
-export const wapper = styled.div`
+export const Wapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;

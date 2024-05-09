@@ -1,4 +1,4 @@
-import * as s from '../Style/BoardMain.tsx';
+import * as s from '../Style/Board.tsx';
 
 function Main() {
   return (
